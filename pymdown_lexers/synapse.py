@@ -17,6 +17,6 @@ class SynapseLexer(RegexLexer):
             (r'\s+', Text),
             #(r'[<>()]', Operator),
             #(r'<(.*?)>', Keyword),
-            (r'> (.*?)\(', String),
+            #(r'> (.*?)\(', String),
         ]
     }
