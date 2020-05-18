@@ -6,6 +6,7 @@ entry_points = '''
 [pygments.lexers]
 criticmarkup=pymdown_lexers:CriticMarkupLexer
 hex=pymdown_lexers:HexLexer
+syn=pymdown_lexers:SynapseLexer
 '''
 
 setup(
