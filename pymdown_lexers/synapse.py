@@ -16,6 +16,7 @@ class SynapseLexer(RegexLexer):
         'root': [
             (r'(<)([\w\s,]+)(>)', bygroups(token.Operator, token.Keyword, token.Operator)),
             (r'\s+', token.Text),
+            (r',', token.Operator),
             (r'(\w*?)(\))', bygroups(token.Text, token.Operator)),
             (r'(\w*?)(\()', bygroups(token.String, token.Operator)),
             #Edge cases
