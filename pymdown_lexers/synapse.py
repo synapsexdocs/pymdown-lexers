@@ -14,7 +14,7 @@ class SynapseLexer(RegexLexer):
 
     tokens = {
         'root': [
-            (r'.*?', Text), # TODO: fix this garbage
+            (r'.+', Text) # TODO: fix this garbage
             #(r'\w+', Text),
             #(r'[,()]', Operator),
             #(r'(<)(.*?)(>)', bygroups(Operator, Keyword, Operator)),
