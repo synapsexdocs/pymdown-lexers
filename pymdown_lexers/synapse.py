@@ -15,9 +15,9 @@ class SynapseLexer(RegexLexer):
     tokens = {
         'root': [
             (r'\s+', Text),
-            #(r'\> (.*?)\(', String),
+            (r'> (.*?)\\(', String),
             #(r'[<>()]', Operator),
-            (r'<[.*?]>', Keyword)
+            #(r'<[.*?]>', Keyword)
         ]
     }
 #(r'(<)(.*?)(>)(.*?)(\))(\s*)(.*?)$',bygroups(Name.Attribute, Text, Operator, Text, String))
