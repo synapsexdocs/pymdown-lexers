@@ -14,10 +14,10 @@ class SynapseLexer(RegexLexer):
 
     tokens = {
         'root': [
+            (r'.+', Text),
             (r'[,()]', Operator),
             (r'(<)(.*?)(>)', bygroups(Operator, Keyword, Operator)),
-            (r'(>)(.*?)(\()', bygroups(Operator, String, Operator)),
-            #(r'.+', Text)
+            (r'(>)(.*?)(\()', bygroups(Operator, String, Operator))
             #(r'(<)(.*?)(>)(.*?)(\()(<)(.*?)(>)(.*?)(\))', bygroups(Operator, Keyword, Operator, String, Operator, Operator, Keyword, Operator, Text, Operator)),
             #(r'\> (.*?)\\(', String)
             #(r'[<>(),]', Operator),
