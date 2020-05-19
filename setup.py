@@ -9,7 +9,7 @@ syn=pymdown_lexers:SynapseLexer
 
 setup(
     name='pymdown-lexers',
-    version='1.1.2',
+    version='1.2.0',
     description='Pygments lexer package for PyMdown.',
     author='Isaac Muse',
     author_email='Isaac.Muse [at] gmail.com',
