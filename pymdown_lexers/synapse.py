@@ -20,3 +20,4 @@ class SynapseLexer(RegexLexer):
             (r'<[.*?]>', Keyword)
         ]
     }
+#(r'(<)(.*?)(>)(.*?)(\))(\s*)(.*?)$',bygroups(Name.Attribute, Text, Operator, Text, String))
