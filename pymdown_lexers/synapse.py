@@ -1,6 +1,6 @@
 """Pygments lexer for Synapse X docs."""
 from pygments.lexer import RegexLexer, bygroups
-from pygments.token import *
+from pygments import token
 
 __all__ = ("SynapseLexer",)
 
@@ -14,13 +14,9 @@ class SynapseLexer(RegexLexer):
 
     tokens = {
         'root': [
-            (r'\s+', Text),
-            (r'(\w*?)([\),])', bygroups(Text, Operator)),
-            (r'(<)(.*?)(>)', bygroups(Operator, Keyword, Operator)),
-            (r'(\w*?)(\()', bygroups(String, Operator))
-            #(r'(<)(.*?)(>)(.*?)(\()(<)(.*?)(>)(.*?)(\))', bygroups(Operator, Keyword, Operator, String, Operator, Operator, Keyword, Operator, Text, Operator)),
-            #(r'\> (.*?)\\(', String)
-            #(r'[<>(),]', Operator),
-            #(r'<[.*?]>', Keyword)
+            (r'\s+', token.Text),
+            (r'(\w*?)([\),])', bygroups(token.Text, token.Operator)),
+            (r'(<)(.*?)(>)', bygroups(token.Operator, token.Keyword, token.Operator)),
+            (r'(\w*?)(\()', bygroups(token.String, token.Operator))
         ]
     }

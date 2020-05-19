@@ -10,12 +10,5 @@ The idea was to add the custom Pygments lexers here, and build a package that sp
 
 I don't actually imagine many lexers will be added to this, but they are not needed to use PyMdown.
 
-# Included Lexers
-
-| Lexers | Description |
-|-------|-------------|
-| hex | A simple lexer to parse hex data in the form `address: 00 FF 00: ascii`. |
-| criticmarkup | A simple lexer used in PyMdown documents to highlight CriticMarkup in a way that stands out in plain text. |
-
 ## Adding New Lexers
 To add a new lexer, the lexer must be dropped into the `pymdown_lexers` folder.  The `__init__.py` file must be updated to expose the lexer.  Lastly, `setup.py` must be modified to setup the entry points for the new lexer.
