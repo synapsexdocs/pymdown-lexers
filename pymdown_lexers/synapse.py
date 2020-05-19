@@ -17,9 +17,10 @@ class SynapseLexer(RegexLexer):
             (r'(<)([\w\s,]+)(>)', bygroups(token.Operator, token.Keyword, token.Operator)),
             (r'\s+', token.Text),
             (r',', token.Operator,  '#push'),
-            (r'(\w*?)(\))', bygroups(token.Text, token.Operator)),
+            (r'(\w*?)(\),)', bygroups(token.Text, token.Operator)),
             (r'(\w*?)(\()', bygroups(token.String, token.Operator)),
-            #Edge cases
+            #(r'(\w+)(,)', bygroups(token.Text, token.Operator))
+            #Edge case
             #(r'(<)(\w+)(,)', bygroups(token.Operator, token.Keyword, token.Operator)),
             #(r'(,\s)(\w+)(,)', bygroups(token.Operator, token.Keyword, token.Operator)),
             #(r'(\w+)(>)', bygroups(token.Keyword, token.Operator)),
