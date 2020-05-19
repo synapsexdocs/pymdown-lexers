@@ -17,7 +17,7 @@ class SynapseLexer(RegexLexer):
             (r'\s+', Text),
             (r'(\w*?)([\),])', bygroups(Text, Operator)),
             (r'(<)(.*?)(>)', bygroups(Operator, Keyword, Operator)),
-            (r'> (.*?)(\()', bygroups(Operator, String, Operator))
+            (r'(\w*?)(\()', bygroups(String, Operator))
             #(r'(<)(.*?)(>)(.*?)(\()(<)(.*?)(>)(.*?)(\))', bygroups(Operator, Keyword, Operator, String, Operator, Operator, Keyword, Operator, Text, Operator)),
             #(r'\> (.*?)\\(', String)
             #(r'[<>(),]', Operator),
