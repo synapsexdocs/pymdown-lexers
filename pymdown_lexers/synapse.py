@@ -19,7 +19,7 @@ class SynapseLexer(RegexLexer):
             (r'(\w*?)(\()', bygroups(token.String, token.Operator)),
             (r'(<)(\w+)(,)', bygroups(token.Operator, token.Keyword, token.Operator)),
             (r'(,)\s(\w+)(.{1})', bygroups(token.Operator, token.Keyword, token.Operator)),
-            (r'(,)(\w+)(>)', bygroups(token.Operator, token.Keyword, token.Operator)),
+            (r'(,)\s(\w+)(>)', bygroups(token.Operator, token.Keyword, token.Operator)),
             (r'(<)(\w+)(>)', bygroups(token.Operator, token.Keyword, token.Operator))
         ]
     }
