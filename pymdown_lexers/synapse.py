@@ -15,7 +15,7 @@ class SynapseLexer(RegexLexer):
     tokens = {
         'root': [
             #(r'\s+', Text),
-            (r'\> (.*?)\\(', String),
+            (r'\> (.*?)\\(', String)
             #(r'[<>()]', Operator),
             #(r'<[.*?]>', Keyword)
         ]
