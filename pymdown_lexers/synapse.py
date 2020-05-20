@@ -25,8 +25,9 @@ class SynapseLexer(RegexLexer):
             # Datatype highlighting
             (r'(<)([\w\s\?\.,]+)(>)', bygroups(token.Operator, token.Keyword, token.Operator)),
             # Edge cases
-            (r'(\w+)(:)', bygroups(token.Keyword, token.Operator)),
+            #(r'(\w+)(:)', bygroups(token.Keyword, token.Operator)),
             (r'(\w+)(\]\))', bygroups(token.Text, token.Operator)),
             (r'^(\w+)(.)(\w+)$', bygroups(token.Keyword, token.Operator, token.String)),
+            (r'([\w]*?)(.)([\w]*?)(.)(\*)', bygroups(token.String, token.Operator, token.String, token.Operator, token.Keyword)),
         ]
     }
