@@ -23,6 +23,6 @@ class SynapseLexer(RegexLexer):
             (r'([\w]*?)(.)([\w]*?)(\()', bygroups(token.String, token.Operator, token.String, token.Operator)),
             (r'([\w]*?)(.)([\w]*?)(.)([\w]*?)(\()', bygroups(token.String, token.Operator, token.String, token.Operator, token.String, token.Operator)),
             #Datatype highlighting
-            (r'(<)(.+)(>)', bygroups(token.Operator, token.Keyword, token.Operator)),
+            (r'(<)([\w\s,]+)(>)', bygroups(token.Operator, token.Keyword, token.Operator)),
         ]
     }
