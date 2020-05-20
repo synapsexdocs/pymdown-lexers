@@ -18,7 +18,7 @@ class SynapseLexer(RegexLexer):
             (r'[,\[\]]', token.Operator),
             (r'(\w*?)(\)|,)', bygroups(token.Text, token.Operator)),
             # Very bad way of doing things
-            (r'([\w]*?)(\()', bygroups(token.String, token.Operator)),
+            #(r'([\w]*?)(\()', bygroups(token.String, token.Operator)),
             #(r'([\w]*?)(.)([\w]*?)(\()', bygroups(token.String, token.Operator, token.String, token.Operator)),
             (r'([\w]*?)(.)([\w]*?)(.)([\w]*?)(\()', bygroups(token.String, token.Operator, token.String, token.Operator, token.String, token.Operator)),
             (r'([\w]*?)(.)([\w]*?)(.)([\w]*?)(.)([\w]*?)(\()', bygroups(token.String, token.Operator, token.String, token.Operator, token.String, token.Operator, token.String, token.Operator)),
