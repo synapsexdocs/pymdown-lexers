@@ -15,10 +15,15 @@ class SynapseLexer(RegexLexer):
     tokens = {
         'root': [
             (r'\s+', token.Text),
-            (r',', token.Operator),
-            (r'(\w+)(:)', bygroups(token.Keyword, token.Operator)),
-            (r'(\w*?)(\)|,)', bygroups(token.Text, token.Operator)),
-            (r'([\w\.]*?)(\()', bygroups(token.String, token.Operator)),
-            (r'(<)([\w\s,]+)(>)', bygroups(token.Operator, token.Keyword, token.Operator)),
+            (r'[\.,()<>]', token.Operator),
+            (r'(\w+)(?::)', token.Keyword),
+            (r'(\w+)(?:\)|,)', token.Text),
+            # Very bad way of doing things
+            (r'([\w]*?)(?:\()', token.String),
+            (r'([\w]*?)(?:.)([\w]*?)(?:\()', bygroups(token.String, token.String)),
+            (r'([\w]*?)(?:.)([\w]*?)(?:.)([\w]*?)(?:\()', bygroups(token.String, token.String, token.String)),
+            #Datatype highlighting
+            (r'(\w+)(?:,)', token.Keyword),
+            (r'(\w+)(?:>)', token.Keyword),
         ]
     }
