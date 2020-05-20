@@ -26,5 +26,6 @@ class SynapseLexer(RegexLexer):
             # Edge cases
             (r'(\w+)(:)', bygroups(token.Keyword, token.Operator)),
             (r'(\w+)(\]\))', bygroups(token.Text, token.Operator)),
+            (r'^(\w+)(.)(\w+)$', bygroups(token.Text, token.Operator)),
         ]
     }
