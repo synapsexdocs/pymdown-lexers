@@ -15,7 +15,7 @@ class SynapseLexer(RegexLexer):
     tokens = {
         'root': [
             (r'\s+', token.Text),
-            (r'[,\[\]]', token.Operator),
+            (r'[,\[\]\)]', token.Operator),
             (r'(\w+)(\)|,)', bygroups(token.Text, token.Operator)),
             # Very bad way of doing things
             (r'(\w+)(\()', bygroups(token.String, token.Operator)),
